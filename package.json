@@ -1,0 +1,49 @@
+{
+  "name": "generator-babel-node",
+  "version": "0.1.0",
+  "description": "Generator for babel-node.",
+  "license": "wtfpl",
+  "main": "app/index.js",
+  "repository": "megawac/generator-babel-node",
+  "author": {
+    "name": "Graeme Yeates",
+    "email": "yeatesgraeme@gmail.com",
+    "url": "https://github.com/megawac"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "6to5",
+    "babel",
+    "es6",
+    "node",
+    "iojs",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "chalk": "^0.5.0",
+    "fullname": "^1.1.0",
+    "git-config": "0.0.6",
+    "lodash.camelcase": "^3.0.1",
+    "lodash.kebabcase": "^3.0.1",
+    "npm": "*",
+    "recursive-readdir-sync": "^1.0.6",
+    "yeoman-generator": "^0.18.0",
+    "yosay": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "preferGlobal": true
+}
