@@ -35,7 +35,6 @@
     "lodash.camelcase": "^3.0.1",
     "lodash.kebabcase": "^3.0.1",
     "npm": "*",
-    "recursive-readdir-sync": "^1.0.6",
     "yeoman-generator": "^0.18.0",
     "yosay": "^0.3.0"
   },
