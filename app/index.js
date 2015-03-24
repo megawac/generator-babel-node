@@ -2,17 +2,19 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
-var npm = require('npm');
-var gitConfig = require('git-config');
 var camelcase = require('lodash.camelcase');
 var kebabcase = require('lodash.kebabcase');
+
+var Promise = require('bluebird');
+
+var exec = Promise.promisify(require('child_process').exec);
+var gitConfig = Promise.promisify(require('git-config'));
 var fs = require('fs');
 var path = require('path');
 
 module.exports = yeoman.generators.Base.extend({
   initializing: function() {
     this.pkg = require('../package.json');
-    this.config = gitConfig.sync();
   },
 
   prompting: function() {
@@ -23,8 +25,13 @@ module.exports = yeoman.generators.Base.extend({
       'Welcome to the super-duper ' + chalk.red('Es6NodeBoilerplate') + ' generator!'
     ));
 
-    npm.load(function() {
-      this.username = npm.whoami();
+    Promise.all([gitConfig(), exec('npm whoami').catch(function(e) {
+      console.error('Error getting npm user name: run `npm login`');
+      console.error(e);
+    })])
+    .then(function(args) {
+      this.config = args[0];
+      this.username = String(args[1][0]).replace(/\n/g, '');
       this._showPrompts(done);
     }.bind(this));
   },
