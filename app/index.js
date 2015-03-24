@@ -45,11 +45,6 @@ module.exports = yeoman.generators.Base.extend({
         default: config.user.name + ' <' + config.user.email + '>'
       }, {
         type: 'input',
-        name: 'global',
-        message: 'What would you like the global to be (in browsers)?',
-        default: camelcase(this.appname)
-      }, {
-        type: 'input',
         name: 'tags',
         message: 'Are there any tags for your package (e.g. cure-for-world-hunger)'
       }];
