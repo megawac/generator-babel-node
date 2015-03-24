@@ -1,9 +1,9 @@
-export default class <%= global %> {
-	constructor() {
-		this.x = 'hey!';
-	}
+export default class lodashDecorators {
+  constructor() {
+    this.msg = 'hey!';
+  }
 
-	mainFn() {
-		return this.msg;
-	}
+  mainFn() {
+    return this.msg;
+  }
 }

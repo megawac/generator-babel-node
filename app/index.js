@@ -54,7 +54,6 @@ module.exports = yeoman.generators.Base.extend({
         this.repo = props.repo;
         this.description = props.description;
         this.author = props.author;
-        this.global = props.global;
         this.tags = props.tags && props.tags.split(',');
         done();
       }.bind(this));

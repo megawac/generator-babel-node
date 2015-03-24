@@ -1,6 +1,6 @@
 {
   "name": "generator-babel-node",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generator for babel-node.",
   "license": "wtfpl",
   "main": "app/index.js",
