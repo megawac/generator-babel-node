@@ -1,6 +1,6 @@
 {
   "name": "generator-babel-node",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Generator for babel-node.",
   "license": "wtfpl",
   "main": "app/index.js",
@@ -35,6 +35,7 @@
     "git-config": "0.0.6",
     "lodash.camelcase": "^3.0.1",
     "lodash.kebabcase": "^3.0.1",
+    "lodash.trim": "^3.0.1",
     "yeoman-generator": "^0.18.0",
     "yosay": "^0.3.0"
   },

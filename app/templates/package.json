@@ -1,7 +1,7 @@
 {
   "name": "<%= repo %>",
   "version": "0.0.1",
-  "description": "<% description %>",
+  "description": "<%= description %>",
   "main": "dist/index.js",
   "scripts": {
     "test": "gulp",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/<%= user %>/<%= repo %>.git"
   },
-  "keywords": [],
+  "keywords": <%= tags %>,
   "author": "<%= author %>",
   "license": "MIT",
   "bugs": {

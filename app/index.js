@@ -2,8 +2,10 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+
 var camelcase = require('lodash.camelcase');
 var kebabcase = require('lodash.kebabcase');
+var trim = require('lodash.trim');
 
 var Promise = require('bluebird');
 
@@ -59,7 +61,7 @@ module.exports = yeoman.generators.Base.extend({
     }, {
       type: 'input',
       name: 'tags',
-      message: 'Are there any tags for your package (e.g. cure-for-world-hunger)'
+      message: 'Are there any tags for your package (e.g. cure for world hunger, million dollar idea)'
     }];
 
     this.prompt(prompts, function(props) {
@@ -67,7 +69,7 @@ module.exports = yeoman.generators.Base.extend({
       this.repo = props.repo;
       this.description = props.description;
       this.author = props.author;
-      this.tags = props.tags && props.tags.split(',');
+      this.tags = JSON.stringify(props.tags ? props.tags.split(',').map(trim) : []);
       done();
     }.bind(this));
   },
