@@ -33,7 +33,7 @@ module.exports = yeoman.generators.Base.extend({
     })])
     .then(function(args) {
       this.config = args[0];
-      this.username = String(args[1][0]).replace(/\n/g, '');
+      this.username = trim(args[1][0]);
       this._showPrompts(done);
     }.bind(this));
   },
